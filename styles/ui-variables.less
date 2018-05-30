@@ -10,17 +10,26 @@
 // Try to edit some of the values below to see your theme change.
 // A good start is to change the color of the `@base-background-color` variable.
 
+//Custom Colours
+@colourGreen: #152414;
+@colourGreenFaded: #1c211d;
+@colourRed: #3b1911;
+@colourGrey: lighten(#939e94,10%);
+@colourTan: #e5bd6e;
+@colourBlueHighlight: #18a6c9;
+@colourGreenHighlight: #36ad3a;
+@colourRedHighlight: #ad3836;
 
 // Text Colors
-@text-color:           hsl(0,0%,66%);
-@text-color-subtle:    hsl(0,0%,50%);
-@text-color-highlight: hsl(0,0%,94%);
-@text-color-selected:  hsl(0,0%,100%);
+@text-color:           @colourGrey;
+@text-color-subtle:    darken(@colourGrey, 20%);
+@text-color-highlight: lighten(@colourGrey, 20%);
+@text-color-selected:  @colourRedHighlight;
 
-@text-color-info:    hsl(219,  79%, 66%);
-@text-color-success: hsl(140,  44%, 62%);
-@text-color-warning: hsl( 36,  60%, 72%);
-@text-color-error:   hsl(  9, 100%, 64%);
+@text-color-info:    @colourGreen;
+@text-color-success: @colourBlueHighlight;
+@text-color-warning: @colourGreenHighlight;
+@text-color-error:   @colourRedHighlight;
 
 // Background colors
 @background-color-info:    hsl(208, 100%, 50%);
@@ -33,8 +42,9 @@
 @app-background-color:       darken(@base-background-color, 5%);
 
 // Base colors
-@base-background-color: hsl(222,6%,22%);
-@base-border-color:     darken(@base-background-color, 8%);
+@base-background-color: @colourGreen;
+@alternate-background-color: @colourGreenFaded;
+@base-border-color:     darken(@base-background-color, 20%);
 
 // Component colors
 @pane-item-background-color: @base-background-color;
